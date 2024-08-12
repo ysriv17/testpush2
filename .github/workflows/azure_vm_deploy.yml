@@ -1,0 +1,25 @@
+name: "azure_vm_deploy"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      # The first step checks out the code from the repository.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # The second step sets up Node.js with version 16.
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+      - run: sudo rsync --delete dist/ /var/www/dial247.ai/html/
+      - run: sudo service nginx restart

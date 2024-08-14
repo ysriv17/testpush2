@@ -14,38 +14,38 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="logoimg" />
       </div>
-      <nav className="hidden md:flex space-x-8">
-        <Link
-          to="/product"
-          className="text-[#0496A5] text-lg font-Poppins hover:underline"
-        >
-          Product
-        </Link>
-        <button
-          onClick={()=>{
-            var element = document.getElementById("faq");
-            element.scrollIntoView({
-              block: "start",
-              behavior: "smooth",
-            })
-          }}
-          className="text-[#0496A5] text-lg font-Poppins  hover:underline"
-        >
-          FAQ
-        </button>
-        <Link
-          to="/try-it"
-          className="text-[#0496A5]  text-lg font-Poppins hover:underline"
-        >
-          Try it
-        </Link>
-        <Link
-          to="/pricing"
-          className="text-[#0496A5] text-lg font-Poppins  hover:underline"
-        >
-          Pricing
-        </Link>
-      </nav>
+        {/* <nav className="hidden md:flex space-x-8">
+          <Link
+            to="/product"
+            className="text-[#0496A5] text-lg font-Poppins hover:underline"
+          >
+            Product
+          </Link>
+          <button
+            onClick={()=>{
+              var element = document.getElementById("faq");
+              element.scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+              })
+            }}
+            className="text-[#0496A5] text-lg font-Poppins  hover:underline"
+          >
+            FAQ
+          </button>
+          <Link
+            to="/try-it"
+            className="text-[#0496A5]  text-lg font-Poppins hover:underline"
+          >
+            Try it
+          </Link>
+          <Link
+            to="/pricing"
+            className="text-[#0496A5] text-lg font-Poppins  hover:underline"
+          >
+            Pricing
+          </Link>
+        </nav> */}
       <button
         className="md:hidden text-[#0496A5] focus:outline-none"
         onClick={toggleMobileMenu}

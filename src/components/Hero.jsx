@@ -11,7 +11,10 @@ const Hero = () => {
   const handleClose = () => {
     setShowPopUp(false);
   };
-
+  const openCalendly = () =>{
+    const url = 'https://calendly.com/dial247-info/30min'
+    window.location.href = url
+  }
   return (
     <div className="pb-8 flex flex-col">
       <div className="flex flex-col xl:flex-row items-center justify-center p-6 md:p-10 ">
@@ -41,7 +44,9 @@ const Hero = () => {
               <MdOutlinePhoneInTalk className="ml-2 h-4 w-4" />
             </button>
 
-            <button className="bg-[#0388A7] font-semibold flex items-center justify-center text-white px-8 py-2 rounded transition transform button-hover">
+            <button 
+            onClick={openCalendly}
+            className="bg-[#0388A7] font-semibold flex items-center justify-center text-white px-8 py-2 rounded transition transform button-hover">
               Talk to sales
               <MdOutlinePhoneInTalk className="ml-2 h-4 w-4" />
             </button>

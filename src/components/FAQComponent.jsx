@@ -62,7 +62,7 @@ const FAQComponent = () => {
   ];
 
   return (
-    <div className="p-6 md:p-10 container bg-white mx-auto py-8 mb-8 space-y-4 min-h-screen">
+    <div className="p-6 md:p-10 container bg-white mx-auto py-8 mb-8 space-y-4 min-h-screen" id="faq">
       <h2 className="text-4xl py-8 font-Poppins md:text-6xl text-gray-800  font-bold text-center mb-6  fade-in-up fade-in-up fade-in-up-delay-3 ">
         Frequently Asked
         <br /> <span className="text-[#0388A7] px-2">Questions</span>

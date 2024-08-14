@@ -1,6 +1,10 @@
 // import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { GrRadialSelected } from "react-icons/gr";
+import useSound from 'use-sound'
+import sampleCall from '../assets/sampleCall.wav'
+
 const Features = () => {
+  const [playSound] = useSound(sampleCall)
   return (
     <div className=" px-4 py-8 md:py-10">
       <div className="p-6 md:p-10 bg-gray-100 rounded-3xl lg:flex">
@@ -18,10 +22,12 @@ const Features = () => {
           </p>
         </div>
         <div className="flex justify-center items-center font-Poppins transition transform  button-hover">
-          <button className="bg-[#0496A5] flex items-center justify-between mr-4 text-white rounded p-4">
+        <button 
+            onClick={playSound}
+            className="bg-[#0496A5] flex items-center justify-between mr-4 text-white rounded p-4">
             Listen to the recordings here
             {/* <FaArrowUpRightFromSquare className="h-4 w-4 ml-4 text-white" /> */}
-            <GrRadialSelected className="h-4 w-4 ml-4 text-white" />
+            {/* <GrRadialSelected className="h-4 w-4 ml-4 text-white" /> */}
           </button>
         </div>
       </div>

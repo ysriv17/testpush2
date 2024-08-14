@@ -21,12 +21,18 @@ const Header = () => {
         >
           Product
         </Link>
-        <Link
-          to="/faq"
+        <button
+          onClick={()=>{
+            var element = document.getElementById("faq");
+            element.scrollIntoView({
+              block: "start",
+              behavior: "smooth",
+            })
+          }}
           className="text-[#0496A5] text-lg font-Poppins  hover:underline"
         >
           FAQ
-        </Link>
+        </button>
         <Link
           to="/try-it"
           className="text-[#0496A5]  text-lg font-Poppins hover:underline"

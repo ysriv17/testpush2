@@ -19,7 +19,9 @@ const FormPopup = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    if (formData.email && formData.name && formData.number) {
+      setIsSubmitting(true);
+    }
     setError(null);
     setSuccessMessage("");
   };
@@ -28,12 +30,11 @@ const FormPopup = ({ onClose }) => {
     if (isSubmitting) {
       const submitData = async () => {
         try {
-          const result = await submitFormData(formData);
-          console.log(result);
+        await submitFormData(formData);
           setSuccessMessage("Form submitted successfully!");
           setError(null);
         } catch (error) {
-          console.error(error);
+          console.error(error, "errrorrr");
           setError(
             "There was an issue submitting the form. Please try again later."
           );
@@ -98,6 +99,7 @@ const FormPopup = ({ onClose }) => {
           />
 
           <button
+            type="submit"
             disabled={isSubmitting}
             className="bg-[#0388A7] font-semibold min-w-min text-white py-2 px-4 rounded mx-auto"
           >

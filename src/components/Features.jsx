@@ -1,10 +1,12 @@
-// import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { GrRadialSelected } from "react-icons/gr";
-import useSound from 'use-sound'
-import sampleCall from '../assets/sampleCall.wav'
+import useSound from "use-sound";
+import sampleCall from "../assets/sampleCall.wav";
+import { useState } from "react";
+import { MdHeadsetOff } from "react-icons/md";
+import { MdHeadset } from "react-icons/md";
 
 const Features = () => {
-  const [playSound] = useSound(sampleCall)
+  const [playSound] = useSound(sampleCall);
+  const [open, setOpen] = useState(false);
   return (
     <div className=" px-4 py-8 md:py-10">
       <div className="p-6 md:p-10 bg-gray-100 rounded-3xl lg:flex">
@@ -22,13 +24,22 @@ const Features = () => {
           </p>
         </div>
         <div className="flex justify-center items-center font-Poppins transition transform  button-hover">
-        <button 
-            onClick={playSound}
-            className="bg-[#0496A5] flex items-center justify-between mr-4 text-white rounded p-4">
-            Listen to the recordings here
-            {/* <FaArrowUpRightFromSquare className="h-4 w-4 ml-4 text-white" /> */}
-            {/* <GrRadialSelected className="h-4 w-4 ml-4 text-white" /> */}
-          </button>
+          <div className="flex flex-col items-center sm:gap-10 gap-5 h-full">
+            {open ? (
+              <MdHeadset className="lg:w-[70px] lg:h-[70px] w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] " />
+            ) : (
+              <MdHeadsetOff className="lg:w-[70px] lg:h-[70px] w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] " />
+            )}
+            <button
+              onClick={() => {
+                playSound;
+                setOpen(!open);
+              }}
+              className="bg-[#0496A5] flex items-center justify-between text-white rounded p-4"
+            >
+              Listen to the recordings here
+            </button>
+          </div>
         </div>
       </div>
     </div>

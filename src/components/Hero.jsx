@@ -47,7 +47,7 @@ const Hero = () => {
             <button 
             onClick={openCalendly}
             className="bg-[#0388A7] font-semibold flex items-center justify-center text-white px-8 py-2 rounded transition transform button-hover">
-              Talk to sales
+              Talk To Sales
               <MdOutlinePhoneInTalk className="ml-2 h-4 w-4" />
             </button>
           </div>

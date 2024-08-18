@@ -9,7 +9,7 @@ const FAQComponent = () => {
 
   const faqs = [
     {
-      question: "what is Dial247.ai?",
+      question: "What is Dial247.ai?",
       answer:
         "Dial247.AI is a NextGen AI-phone agent development company which has made AI to communicate on calls just like we humans do.It excels at mimicking human behavior, listening attentively, and responding with natural tonality and voice.This intelligent system is poised for a significant breakthrough, capable of handling a wide range of tasks.",
     },
@@ -19,7 +19,7 @@ const FAQComponent = () => {
         "You share your specific needs with us, and we customize a bot to meet those requirements. Once set up, we can proceed with a pay-per-call or pay-per-conversation model. Let's talk!",
     },
     {
-      question: "why do I need it?",
+      question: "Why do I need it?",
       answer:
         "It automates the process of making calls to thousands, even millions, of people. This technology makes traditional call centers and manual calling unnecessary for tasks like inbound and outbound calls, appointment scheduling, candidate screening and so on. After each call, it provides detailed analysis tailored to your needs.",
     },
@@ -62,11 +62,18 @@ const FAQComponent = () => {
   ];
 
   return (
-    <div className="p-6 md:p-10 container bg-white mx-auto py-8 mb-8 space-y-4 min-h-screen" id="faq">
-      <h2 className="text-4xl py-8 font-Poppins md:text-6xl text-gray-800  font-bold text-center mb-6  fade-in-up fade-in-up fade-in-up-delay-3 ">
-        Frequently Asked
-        <br /> <span className="text-[#0388A7] px-2">Questions</span>
-      </h2>
+    <div
+      className="p-6 md:p-10 container bg-white mx-auto py-8 mb-8 space-y-4 min-h-screen"
+      id="faq"
+    >
+      <div className="flex flex-col ">
+        <h2 className="text-4xl  font-Poppins md:text-6xl text-gray-800  font-bold text-center mb-6  fade-in-up fade-in-up fade-in-up-delay-3 ">
+          Frequently Asked
+        </h2>
+        <h2 className="text-[#0388A7] text-4xl  font-Poppins md:text-6xl font-bold text-center mb-6 fade-in-up fade-in-up fade-in-up-delay-3">
+          Questions
+        </h2>
+      </div>
       <div className="space-y-4 fade-in-up fade-in-up fade-in-up-delay-5">
         {faqs.map((faq, index) => (
           <div key={index} className="border border-gray-200 p-8 rounded-lg">
